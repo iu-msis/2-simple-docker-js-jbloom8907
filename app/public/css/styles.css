@@ -1,0 +1,19 @@
+html,
+body {
+  background-color: rgb(32,32,32);
+  color: rgb(0,255,255);
+
+}
+
+nav,
+.bg-custom {
+  background-color: rgb(0,255,255);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: rgb(178,34,34);
+}
+
+.navbar-custom .navbar-brand {
+  color: rgb(178,34,34);
+}
