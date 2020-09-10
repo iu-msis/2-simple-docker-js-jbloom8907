@@ -39,6 +39,7 @@
         </div>
         <div class="col-6">
           <table id="taskTable" style="width:100%" border=2>
+          <thead>
             <tr>
               <th>Title</th>
               <th>Author(s)</th>
@@ -47,6 +48,8 @@
               <th>Page Count</th>
               <th>MSRP</th>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <td>1984</td>
               <td>George Orwell</td>
@@ -79,6 +82,7 @@
               <td>277</td>
               <td>22.99</td>
             </tr>
+          </tbody>
           </table>
           <br>
           <form>
@@ -120,6 +124,7 @@
     <!-- Optional JavaScript -->
     <script src='js/tablesort.min.js'></script>
     <script>
+      // Tablesort plugin from http://tristen.ca/tablesort/demo/
       new Tablesort(document.getElementById('taskTable'));
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
