@@ -33,13 +33,14 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col myLeftCol">
         </div>
         <div id="vue-element" class="col-6">
-          <div class="randomapi" v-for="pt in ptList">
-            <span class="lastName">{{ pt.lastName }}</span>
+          <div class="randomapi">
+            <span class="results">{{ ptList.results[0] }}</span>
+            <br><span class="name">{{ ptList.results[0].name.first }} {{ ptList.results[0].name.last }}</span>
             <p>Country of Origin: United States of America</p>
             <p>Birthday: 9/3/2020</p>
             <p>Age: 0</p>
