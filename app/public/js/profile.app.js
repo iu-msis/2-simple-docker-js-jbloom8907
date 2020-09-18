@@ -28,6 +28,9 @@ methods: {
       this.userImgLarge = userData.picture.large;
       this.userImgThumb = userData.picture.thumbnail;
       });
+    },
+  formatDate(d) {
+    return moment(d).format("dddd, MMMM, Do YYYY, h:mm:ss a");
     }
   }
 })
