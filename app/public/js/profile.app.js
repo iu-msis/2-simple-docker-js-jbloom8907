@@ -24,7 +24,7 @@ methods: {
       this.userLocation= userData.location.country;
       this.userDob= userData.dob.date;
       this.userAge= userData.dob.age;
-      this.userEmail = "mailto:" + userData.email;
+      this.userEmail = userData.email;
       this.userImgLarge = userData.picture.large;
       this.userImgThumb = userData.picture.thumbnail;
       });

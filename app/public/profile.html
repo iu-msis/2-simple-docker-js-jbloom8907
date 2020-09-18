@@ -39,20 +39,14 @@
         </div>
         <div id="user" class="col-6">
           <div class="randomapi">
-            <p>{{userName}}</p>
-            <p>{{userLocation}}</p>
-            <p>{{userDob}}</p>
-            <p>{{userAge}}</p>
-            <p>{{userEmail}}</p>
-            <p>{{userImgLarge}}</p>
-            <a v-bind:href="userImgLarge">
+            <p>Name: {{userName}}</p>
+            <p>Country of Origin: {{userLocation}}</p>
+            <p>Birthdate: {{userDob}}</p>
+            <p>Age: {{userAge}}</p>
+            <a v-bind:href="'mailto:' + userEmail">Email: {{userEmail}}</a>
+            <br><a v-bind:href="userImgLarge">
               <img v-bind:src="userImgThumb">
             </a>
-            <a v-bind:href="userEmail"
-            <br><a href="mailto:ramona.rivera@example.com">ramona.rivera@example.com</a>
-            <br><br>
-            <a href="img/rr.jpg"><img src="img/rr.jpg" alt="Oops, image broke" class="img-thumbnail"></a>
-            <p>Randomuser. (n.d.). [Ramona Rivera]. https://randomuser.me/. https://randomuser.me/api/portraits/women/18.jpg</p>
           </div>
         </div>
         <div class="col">
