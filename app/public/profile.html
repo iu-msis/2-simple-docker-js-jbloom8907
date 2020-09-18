@@ -45,6 +45,10 @@
             <p>{{userAge}}</p>
             <p>{{userEmail}}</p>
             <p>{{userImgLarge}}</p>
+            <a v-bind:href="userImgLarge">
+              <img v-bind:src="userImgThumb">
+            </a>
+            <a v-bind:href="userEmail"
             <br><a href="mailto:ramona.rivera@example.com">ramona.rivera@example.com</a>
             <br><br>
             <a href="img/rr.jpg"><img src="img/rr.jpg" alt="Oops, image broke" class="img-thumbnail"></a>
