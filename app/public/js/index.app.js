@@ -1,15 +1,33 @@
 var app = new Vue({
-  el: '#vue-element',
+  el: '#user',
   data: {
-    ptList: []
+    userName: "",
+    userLocation: "",
+    userDob: "",
+    userAge: "",
+    userEmail: "",
+    userImgLarge: "",
+    userImgThumb: ""
   },
-  created() {
-    fetch("https://randomuser.me/api")
-    .then( response => response.json() )
-    .then( json => {
-      this.ptList = json;
+created() {
+  this.fetchUser();
+},
 
-      console.log(json)}
-    );
+methods: {
+  fetchUser: function() {
+    fetch("https://randomuser.me/api")
+    .then(response => response.json())
+    .then(data => {
+      var userData = data.results[0];
+      console.log(userData);
+      this.userName= userData.name.first + " " + userData.name.last;
+      this.userLocation= userData.location.country;
+      this.userDob= userData.dob.date;
+      this.userAge= userData.dob.age;
+      this.userEmail = userData.email;
+      this.userImgLarge = userData.picture.large;
+      this.userImgThumb = userData.picture.thumbnail;
+      });
+    }
   }
 })
