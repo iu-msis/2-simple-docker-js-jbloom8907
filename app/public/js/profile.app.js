@@ -29,7 +29,7 @@ methods: {
       this.userImgThumb = userData.picture.thumbnail;
       });
     },
-  handleNewUser( evt ){
+  handleNewUser(){
     this.fetchUser();
   },
   formatDate(d) {
