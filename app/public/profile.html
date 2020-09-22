@@ -38,16 +38,19 @@
         <div class="col myLeftCol">
         </div>
         <div id="user" class="col-6">
-          <div class="randomapi">
-            <p>Name: {{userName}}</p>
-            <p>Country of Origin: {{userLocation}}</p>
-            <p>Birthdate: {{ formatDate(userDob) }}</p>
-            <p>Age: {{userAge}}</p>
-            <a v-bind:href="'mailto:' + userEmail">Email: {{userEmail}}</a>
-            <br><a v-bind:href="userImgLarge">
-              <img v-bind:src="userImgThumb">
-            </a>
-          </div>
+          <form method="post" v-on:submit.prevent="handleNewUser">
+            <div class="randomapi">
+              <p>Name: {{userName}}</p>
+              <p>Country of Origin: {{userLocation}}</p>
+              <p>Birthdate: {{ formatDate(userDob) }}</p>
+              <p>Age: {{userAge}}</p>
+              <a v-bind:href="'mailto:' + userEmail">Email: {{userEmail}}</a>
+              <br><a v-bind:href="userImgLarge">
+                <img v-bind:src="userImgThumb">
+              </a>
+            </div>
+          <button type="submit" class="btn btn-primary">New User</button>
+          </form>
         </div>
         <div class="col">
         </div>

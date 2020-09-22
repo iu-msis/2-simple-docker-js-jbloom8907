@@ -29,6 +29,9 @@ methods: {
       this.userImgThumb = userData.picture.thumbnail;
       });
     },
+  handleNewUser( evt ){
+    this.fetchUser();
+  },
   formatDate(d) {
     return moment(d).format("dddd, MMMM, Do YYYY, h:mm:ss a");
     }
